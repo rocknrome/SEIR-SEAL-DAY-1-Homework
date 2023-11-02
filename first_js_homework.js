@@ -125,3 +125,116 @@ while (i < 20) {
 //in this case we will see A then AA then AAA and so on till there will be 21 letters A in the row. 
 //21 because we start frm 0 and count to 20.
 console.log(letters);
+
+/*SECTION 4
+
+LOOPS
+
+QUESTION:
+A for loop performs the same operation as a while loop. But what are the key differences, if any? 
+What are the similarities?
+ANSWER:
+Differences: FOR loop has the condition of the loop and the counter declared in the same line, 
+the WHILE loop has those separated. FOR loop has a determined number of iterations set. WHILE is running while 
+the loop condition remains TRUE.
+the similarity is that both designed to execute repeated actions.
+
+
+
+For loop control panel
+Here is an example for loop that prints a message 100 times:
+
+for (let i = 0; i < 100; i++) {
+	console.log('Without you, today\'s emotions are the scurf of yesterday\'s');
+}
+QUESTION:
+What are the three components of the control panel? Each component is separated by a semicolon ;.
+Remember: Write your answers as comments in the file.
+
+ANSWER:
+The first part of the control panel is: let i=0. We declare the initialization. 
+The second part of the control panel is: i<100. We declare condition for the loop. 
+The third part of the control panel is: i++. We are setting up an increment.
+
+For loop II
+Write a for loop that will console.log the numbers 0 to 999.
+
+ANSWER:*/
+for (let i=0; i<10; i++) { //replace 10 with 100 as per task
+  console.log(i);
+}
+
+/*BONUS TASK:
+
+QUESTION:
+What is the difference between \ (backslash, above the enter/return key) and / (forward slash or just slash, 
+shares the key with the ?)? What is \ doing in the string?
+
+console.log('Without you, today\'s emotions are the scurf of yesterday\'s');
+console.log("Without you, today's emotions are the scurf of yesterday's");
+
+ANSWER: This is used in the string in case of ' and ? symbols used in the text, to mark those as a part of the string, 
+and not a part of the code. */
+
+
+/*For loop in reverse
+Code:
+
+Using a postfix operator i-- instead of i++, write a for loop that iterates in reverse. 
+Console.log a countdown from 999 to 0.*/
+for (i=9; i>=0; i--) {
+  console.log(i);
+}
+
+/*More counting
+Write a for loop that uses string concatenation to send a message to the console as well as the current value of i.
+
+The loop should run from 1 to 10.
+
+Expected Result:
+
+The value of i is: 1 of 10
+The value of i is: 2 of 10
+The value of i is: 3 of 10
+The value of i is: 4 of 10
+The value of i is: 5 of 10
+The value of i is: 6 of 10
+The value of i is: 7 of 10
+The value of i is: 8 of 10
+The value of i is: 9 of 10
+The value of i is: 10 of 10*/
+for (i=1; i<=10; i++) {
+  console.log("The value of i is: " + i + " of 10");
+}
+
+/*Bonus Challenge (optional):
+
+Rewrite the above loop using String Interpolation/Template Literals instead of concatenation
+
+Note: string interpolation uses backticks, this is a different character than a single quote. 
+The backtick can usually be found above the left tab key/below the esc key and it shares it with the tilda ~*/
+for (let i = 1; i <= 10; i++) {
+  console.log(`The value of i is: ${i} of 10`);
+}
+
+
+/*Iteration
+const StarWars = ["Han", "C3PO", "R2D2", "Luke", "Leia", "Anakin"];
+Iterate over the StarWars array and print each element to the console.*/
+const StarWars = ["Han", "C3PO", "R2D2", "Luke", "Leia", "Anakin"];
+
+for (let i = 0; i < StarWars.length; i++) { //uses length of the array as the end point 
+  //to iterate thru all elements of the array
+  console.log(`Element ${i}: ${StarWars[i]}`); //interpolation user to display the results
+}
+
+
+/*Iterate over the StarWars array again and print each character's name as well as the value of i.
+
+Bonus Challenge (optional):
+
+Figure out how to iterate over every second element of the StarWars array, starting with the first element.
+=> Han, R2D2, Leia*/
+for (let i = 0; i < StarWars.length; i += 2) { //the increment needs to be changed to iterate over every second element
+  console.log(`Every second element: ${StarWars[i]}`);
+}
